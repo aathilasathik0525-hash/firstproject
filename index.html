@@ -1,28 +1,43 @@
 <!DOCTYPE html>
-<html>
+<html lang="en">
 <head>
-    <title>Simple Calculator</title>
+    <meta charset="UTF-8">
+    <title>Modern Calculator</title>
     <link rel="stylesheet" href="style.css">
 </head>
 <body>
 
-<div class="calculator">
-    <h2>Calculator</h2>
+<div class="container">
+    <div class="calculator">
+        <input type="text" id="display" disabled>
 
-    <input type="number" id="num1" placeholder="Enter first number">
-    <input type="number" id="num2" placeholder="Enter second number">
+        <div class="buttons">
+            <button onclick="clearDisplay()" class="clear">C</button>
+            <button onclick="appendValue('/')">÷</button>
+            <button onclick="appendValue('*')">×</button>
+            <button onclick="deleteLast()">⌫</button>
 
-    <div class="buttons">
-        <button onclick="calculate('+')">+</button>
-        <button onclick="calculate('-')">-</button>
-        <button onclick="calculate('*')">*</button>
-        <button onclick="calculate('/')">/</button>
+            <button onclick="appendValue('7')">7</button>
+            <button onclick="appendValue('8')">8</button>
+            <button onclick="appendValue('9')">9</button>
+            <button onclick="appendValue('-')">−</button>
+
+            <button onclick="appendValue('4')">4</button>
+            <button onclick="appendValue('5')">5</button>
+            <button onclick="appendValue('6')">6</button>
+            <button onclick="appendValue('+')">+</button>
+
+            <button onclick="appendValue('1')">1</button>
+            <button onclick="appendValue('2')">2</button>
+            <button onclick="appendValue('3')">3</button>
+            <button onclick="calculate()" class="equal">=</button>
+
+            <button onclick="appendValue('0')" class="zero">0</button>
+            <button onclick="appendValue('.')">.</button>
+        </div>
     </div>
-
-    <h3 id="result">Result: </h3>
 </div>
 
 <script src="script.js"></script>
-
 </body>
 </html>
